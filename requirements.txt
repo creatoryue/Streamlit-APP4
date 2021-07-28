@@ -4,3 +4,4 @@ pip==21.2.1
 Keras==2.4.3
 librosa==0.8.1
 matplotlib
+numpy
