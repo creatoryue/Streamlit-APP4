@@ -50,7 +50,7 @@ class CNN(object):
         
     def samplePred(self, data):
         # data, sampling_rate = librosa.load(path_test+'\\'+ filename)
-        # X = librosa.feature.mfcc(data)
+        X = librosa.feature.mfcc(data)
         XX = X[:, 0:n_timesteps]
         XX = XX.T[np.newaxis, ...]
         #XX.shape
