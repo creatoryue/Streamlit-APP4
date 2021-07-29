@@ -1,5 +1,4 @@
 import streamlit as st
-from src import loadModel
 import numpy as np
 import os
 
