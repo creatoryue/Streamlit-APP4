@@ -3,6 +3,8 @@ from bokeh.models.widgets import Button
 from bokeh.models import CustomJS
 from streamlit_bokeh_events import streamlit_bokeh_events
 
+# 
+
 stt_button = Button(label="Speak", width=100)
 
 stt_button.js_on_event("button_click", CustomJS(code="""
@@ -16,9 +18,6 @@ stt_button.js_on_event("button_click", CustomJS(code="""
             if (e.results[i].isFinal) {
                 value += e.results[i][0].transcript;
             }
-        }
-        if ( value != "") {
-            document.dispatchEvent(new CustomEvent("GET_TEXT", {detail: value}));
         }
     }
     recognition.start();
